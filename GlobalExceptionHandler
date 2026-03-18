@@ -1,0 +1,13 @@
+/* 
+​Para que o Spring retorne exatamente o status 404 quando o CPF for inválido ou não autorizado, usei um @RestControllerAdvice sbaixo */
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+ @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handleNotFound(ResourceNotFoundException ex) {
+        // Retorna 404 e a mensagem no body conforme solicitado no bônus
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                             .body(Map.of("status", ex.getMessage()));
+    }
+}
