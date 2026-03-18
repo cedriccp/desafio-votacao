@@ -1,0 +1,13 @@
+/* GET /api/v1/telas/pautas/{id}/abrir
+Note o campo de tempo com valor padrão de 1 minuto.*/
+
+{
+  "tipoTela": "FORMULARIO",
+  "titulo": "Configurar Sessão",
+  "itens": [
+    { "id": "minutos", "label": "Duração (minutos)", "tipo": "NUMERICO", "valorPadrao": 1 }
+  ],
+  "botoes": [
+    { "texto": "Iniciar Votação", "url": "http://localhost:8080/api/v1/pautas/1/abrir", "metodo": "POST" }
+  ]
+}
