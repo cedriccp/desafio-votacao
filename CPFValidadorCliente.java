@@ -1,6 +1,6 @@
 @Component
 @Slf4j
-public class CpfValidatorClient {
+public class CpfValidadorCliente {
 
     /**
      * Simula a validação externa de CPF conforme requisitos do bônus.
