@@ -1,0 +1,18 @@
+/* GET /api/v1/telas/pautas/{id}/votar
+Aqui incluímos a Tarefa Bônus 1 (CPF): o campo cpf é injetado no corpo do POST pelo App.*/
+{
+  "tipoTela": "SELECAO",
+  "titulo": "Exerça seu voto",
+  "itens": [
+    {
+      "label": "SIM",
+      "url": "http://localhost:8080/api/v1/pautas/1/votos",
+      "body": { "voto": "SIM", "cpf": "" } 
+    },
+    {
+      "label": "NÃO",
+      "url": "http://localhost:8080/api/v1/pautas/1/votos",
+      "body": { "voto": "NAO", "cpf": "" }
+    }
+  ]
+}
