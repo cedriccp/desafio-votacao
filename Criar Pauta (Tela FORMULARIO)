@@ -1,0 +1,17 @@
+/* GET /api/v1/telas/pautas/nova
+O App renderiza os campos e, ao clicar no botão, faz o POST para a url informada.*/
+{
+  "tipoTela": "FORMULARIO",
+  "titulo": "Nova Pauta",
+  "itens": [
+    { "id": "titulo", "label": "Título da Assembleia", "tipo": "TEXTO" },
+    { "id": "descricao", "label": "Descrição Detalhada", "tipo": "TEXTO" }
+  ],
+  "botoes": [
+    {
+      "texto": "Cadastrar",
+      "url": "http://localhost:8080/api/v1/pautas",
+      "metodo": "POST"
+    }
+  ]
+}
