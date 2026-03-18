@@ -1,1 +1,35 @@
-
+/* json de resposta - tela de selecao com timer */
+{
+  "tipoTela": "SELECAO",
+  "titulo": "Votação em Andamento",
+  "subtitulo": "Pauta: Implementação de Energia Solar na Sede",
+  "metadados": {
+    "tempoRestanteSegundos": 45,
+    "dataFechamentoIso": "2026-03-18T10:00:00Z",
+    "encerrarAutomaticamente": true
+  },
+  "itens": [
+    {
+      "label": "Sim, sou a favor",
+      "estilo": "SUCESSO",
+      "url": "http://192.168.1.50:8080/api/v1/pautas/123/votos",
+      "body": {
+        "voto": "SIM",
+        "associadoId": "ASSOC-9982"
+      }
+    },
+    {
+      "label": "Não, sou contra",
+      "estilo": "PERIGO",
+      "url": "http://192.168.1.50:8080/api/v1/pautas/123/votos",
+      "body": {
+        "voto": "NAO",
+        "associadoId": "ASSOC-9982"
+      }
+    }
+  ],
+  "configuracaoVisual": {
+    "exibirCronometro": true,
+    "corCronometro": "#FF5733"
+  }
+}
