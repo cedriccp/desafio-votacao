@@ -1,3 +1,6 @@
+/* implementação da classe VotacaoService. 
+Esta classe é a principal da aplicação */
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
