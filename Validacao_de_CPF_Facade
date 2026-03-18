@@ -1,0 +1,8 @@
+/* Implementei um CpfValidatorClient que simula a chamada externa.
+Se o CPF termina em "00", retorna 404.
+Caso contrário, alterna aleatoriamente entre ABLE_TO_VOTE e UNABLE_TO_VOTE.
+Não utilizarri timers em memória para evitar perda de dados. O fechamento é lógico. */
+
+public boolean isAberta() {
+    return LocalDateTime.now().isBefore(this.dataEncerramento);
+}
