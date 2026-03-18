@@ -1,4 +1,0 @@
-Versionamento da API (Bônus 3)
-para este projeto é o Versionamento por URI (/api/v1/).
-(depende do usuário atualizar na loja). Ter /v1/ e futuramente /v2/ permite que o backend suporte versões antigas do app simultaneamente.
-Se uma mudança quebrar a compatibilidade, cria o V2Controller. Se for apenas uma adição de campo, mantemos na V1.
