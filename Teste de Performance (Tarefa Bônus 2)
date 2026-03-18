@@ -1,0 +1,22 @@
+# application.properties
+spring.threads.virtual.enabled=true
+
+docker
+ # Estágio 1: Build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+COPY . /app
+WORKDIR /app
+RUN mvn clean package -DskipTests
+
+# Estágio 2: Runtime
+FROM eclipse-temurin:21-jre-jammy
+RUN groupadd spring && useradd -g spring spring
+USER spring:spring
+
+COPY --from=build /app/target/*.jar app.jar
+
+# Volume para persistência do H2 (não perder dados no restart do container)
+VOLUME /data
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+
